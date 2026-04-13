@@ -1,0 +1,32 @@
+joy_node:
+  ros__parameters:
+    device_id: 0
+    deadzone: 0.01  # Keep this high to stop the "turning left" drift
+    autorepeat_rate: 20.0
+
+# CHANGE THIS LINE FROM 'teleop_node' TO 'teleop_twist_joy_node'
+teleop_twist_joy_node:  
+  ros__parameters:
+    publish_stamped_twist: true
+    frame: "base_footprint"
+
+    # Axis 1: Forward/Backward (Left Stick Up/Down)
+    axis_linear:
+      x: 7
+    scale_linear:
+      x: 0.5
+    scale_linear_turbo:
+      x: 2.0
+
+    # Axis 0: Left/Right (Left Stick Left/Right)
+    axis_angular:
+      yaw: 6
+    scale_angular:
+      yaw: 0.5
+    scale_angular_turbo:
+      yaw: 2.0
+
+    # YOUR BUTTON SETTINGS (0=A, 1=B usually)
+    require_enable_button: true
+    enable_button: 1        # You set this to 1 (Usually 'B' button)
+    enable_turbo_button: 0  # You set this to 0 (Usually 'A' button)
