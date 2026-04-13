@@ -1,0 +1,9 @@
+build/
+install/
+log/
+.vscode/
+*.pt
+*.onnx
+*.bag
+*.db3
+__pycache__/
