@@ -27,7 +27,9 @@ setup(
     entry_points={
         'console_scripts': [
             # ADD THIS LINE TO MAKE THE PYTHON SCRIPT EXECUTABLE:
-            'yolo_node = tb3_yolo_vision.yolo_node:main'
+            'yolo_node = tb3_yolo_vision.yolo_node:main',
+            'marker_node = tb3_yolo_vision.marker_map_node:main',
+            'follower_node = tb3_yolo_vision.follower_node:main',
         ],
     },
 )
